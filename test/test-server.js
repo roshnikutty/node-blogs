@@ -58,13 +58,13 @@ describe('Blogs', function(){
         const updateData = {
             title: "My Updated Test Ramblings",
             content: "Testing PUT operation",
-            author: "Roshni",
-            publishDate: "4/30/2017"
+            author: "Roshni"
         };
         return chai.request(app)
         .get('/blogs')
         .then(function(res){
             updateData.id = res.body[0].id;
+            //console.log(res.body[0].id);
             return chai.request(app)
                 .put(`/blogs/${updateData.id}`)
                 .send(updateData);
@@ -77,15 +77,15 @@ describe('Blogs', function(){
         });
     });
 
-    it('should delete item on POST', function(){
+    it('should delete item on DELETE', function(){
         return chai.request(app)
-        .get('/blog')
-        .then(function(res){
-            return chai.request(app)
-                .delete(`/blog/${res.body[0].id}`);
-        })
-        .then(function(res){
-            res.should.have.status(204);
-        });
+            .get('/blogs')
+            .then(function(res){
+                return chai.request(app)
+                    .delete(`/blogs/${res.body[0].id}`);
+            })
+                .then(function(res){
+                    res.should.have.status(204);
+                });
     });
 });
