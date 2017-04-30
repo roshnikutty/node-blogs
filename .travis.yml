@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: emkfnSq7oTXjKvbRniy+F0+o0oWzjaOBgtiGvpLPfUA6wU02vW4Bix7fUTaj2RrckozWmysqE9FZ01ESKirTbclz3ySdpeyfeLfwItB/u32MKIB1sLQ7MrCZ6mhvjB47NPd7+D8EtPVEkedBXlTSM1JhNVcLm6GT8e8DyzG9efMV9xQaIuOZieCDnywg1Zp4j0mPos76De3MtQK9B7jwnEkfZYA+QF60CObrIr6cMrjRZttRtoklkbfgNsUMYpco5gX3AdrOOnlX+4R7woepp09ZG0/2QcSko1fXdzka975i+tq07jrCkfqhNW+OgMZ9w3F+2e6qAx4KBiNu40ejg+vOPcuxg0PYZC/2ZLY7WB3Zfh6IN6jeUdk+ejph+p43n2v8Y86UFXmBTg39rxNiM69xdA2SewnL/4zPdluU4wwN9eYf5GIa4p3xBB/dFpSj78JLBzrTlkPWGXOH/KkuOWZFmyE2RpjliMwpxh5FIJ2m78UMUmPkWswaI6Qd2wtmN9p1Ci+XU27l5CCBN5xda2X2P1oxSk2XZBqwe4dneQ/jQmctBOacR+OZdU41C65yGhDuRGfz5aDmZyqsq6h6vuZt4+2ojJPNpehRb1U5kJ7WLrSuaJD50aPYe1QCvjfxsAKN/h2od92LlqrXG0t1WKX8i7PCrAzDglxULaDzkOo=
+  app: secret-hollows-52924
+  on:
+    repo: roshnikutty/node-blogs
