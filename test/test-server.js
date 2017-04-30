@@ -38,7 +38,8 @@ describe('Blogs', function(){
         const newItem = {
             title: "My Test Ramblings",
             content: "Testing POST operation",
-            author: "Roshni"
+            author: "Roshni",
+            publishDate: "4/30/2017"
         };
         return chai.request(app)
             .post('/blogs')
@@ -57,7 +58,8 @@ describe('Blogs', function(){
         const updateData = {
             title: "My Updated Test Ramblings",
             content: "Testing PUT operation",
-            author: "Roshni"
+            author: "Roshni",
+            publishDate: "4/30/2017"
         };
         return chai.request(app)
         .get('/blogs')
