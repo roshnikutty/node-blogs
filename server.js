@@ -38,7 +38,7 @@ app.delete('/blogs/:id', (req, res) => {
     res.status(204).end();
 });
 
-app.put('/blogs/:id',jsonParser, (req, res) => {
+app.put('/blogs/:id', jsonParser, (req, res) => {
     const updatedBlog = BlogPosts.update({
         id:req.params.id,
         title: req.body.title,
